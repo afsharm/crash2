@@ -14,8 +14,7 @@ export class ButtonComponent {
 
   @Output() btnClick = new EventEmitter();
 
-  onClick() {
-    //console.log("add");
+  onClick() {    
     this.btnClick.emit();
   }
 }
