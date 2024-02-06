@@ -16,7 +16,7 @@ export class TaskItemComponent {
   @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
   faTimes = faTimes;
 
-  onDelete(task: Task) {
+  onDelete(task: Task | undefined) {
     this.onDeleteTask.emit(task);
   }
 }
