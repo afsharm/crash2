@@ -14,9 +14,15 @@ import { CommonModule } from '@angular/common';
 export class TaskItemComponent {
   @Input() task: Task | undefined;
   @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
+  @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter();
   faTimes = faTimes;
 
   onDelete(task: Task | undefined) {
     this.onDeleteTask.emit(task);
+  }
+
+  onToggle(task: Task | undefined) {
+    console.log('onToggle');
+    this.onToggleReminder.emit(task);
   }
 }
